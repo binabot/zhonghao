@@ -29,4 +29,6 @@ footer:
     plugins/fancybox/jquery.fancybox-media.js: {}
     plugins/fancybox/jquery.fancybox-buttons.js: {}
     js/script.js: {}
+    js/camera.min.js: {}
+    js/jquery.rd-parallax.js: {}
     js/custom.js: {}

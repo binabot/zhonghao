@@ -8,9 +8,26 @@ $(document).ready(function(){
     moveSlides: 1,
     pager: false,
   });
+  if ($('#camera').length) {
+    $('#camera').camera({
+        autoAdvance: true,
+        height: '25.87890625%',
+        minHeight: '300px',
+        pagination: false,
+        thumbnails: false,
+        playPause: false,
+        hover: false,
+        loader: 'none',
+        navigation: true,
+        navigationHover: false,
+        mobileNavHover: false,
+        fx: 'simpleFade'
+    });
+  }
 
   // Projects page
   $('.thumb').fancybox();
+
 
   // Baidu map pages
   if ($('#dituContent').length) {
