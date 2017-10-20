@@ -1,0 +1,7 @@
+zh.front_page:
+  path: '/front'
+  defaults:
+    _title: '首页'
+    _controller: '\Drupal\zh\Controller\PagesController::frontPage'
+  requirements:
+    _access: 'TRUE'

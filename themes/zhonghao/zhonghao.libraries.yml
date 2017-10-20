@@ -1,0 +1,32 @@
+header:
+  version: VERSION
+  header: true
+  css:
+    theme:
+      css/grid.css: {}
+      css/camera.css: {}
+      css/mailform.css: {}
+      css/custom.css: {}
+      plugins/jquery.bxslider/jquery.bxslider.min.css: {}
+      plugins/fancybox/jquery.fancybox.css: {}
+      css/baidu-map.css: {}
+      css/font-awesome.min.css: {}
+      css/animate.css: {}
+      css/style.css: {}
+  js:
+    js/jquery.js: {}
+    js/jquery-migrate-1.2.1.js: {}
+    js/device.min.js: {}
+    http://api.map.baidu.com/api?key=&v=1.1&services=true: {type: external}
+  dependencies:
+    - core/drupal
+
+footer:
+  version: VERSION
+  js:
+    plugins/jquery.bxslider/jquery.bxslider.min.js: {}
+    plugins/fancybox/jquery.fancybox.js: {}
+    plugins/fancybox/jquery.fancybox-media.js: {}
+    plugins/fancybox/jquery.fancybox-buttons.js: {}
+    js/script.js: {}
+    js/custom.js: {}

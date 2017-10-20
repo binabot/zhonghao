@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="description" content="深圳市中濠建工集团有限公司成立于2011年，具有国家建设部核定的建建筑工程施工总承包壹级资质，长期以来，中濠建工集团始终秉持“专业铸就品质,品质成就未来”的服务理念和企业精神。" />
+
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+
+    <!--[if lt IE 9]>
+      <script src="/themes/zhonghao/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="page">
+      {{ page }}
+    </div>
+
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+
+  </body>
+</html>

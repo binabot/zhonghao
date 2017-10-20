@@ -1,0 +1,6 @@
+name: ZhongHao
+type: module
+description: 'ZhongHao custom module.'
+package: ZhongHao
+version: VERSION
+core: 8.x
