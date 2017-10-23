@@ -205,9 +205,22 @@ class PagesController
   public function joinUsPage()
   {
     $vars = Theme::getUsefulVariables() + [
-
+      'jobs' => [],
     ];
-
+    // set jobs
+    $jobs = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+      'type' => 'zhaopin',
+      'status' => 1,
+    ]);
+    foreach ($jobs as $nid => $node) {
+      $vars['jobs'][$nid] = [
+        'title'       => $node->getTitle(),
+        'number'      => $node->get('field_zp_number')->value,
+        'work_place'  => $node->get('field_zp_work_place')->value,
+        'salary'      => $node->get('field_zp_salary')->value,
+        'description' => $node->get('field_zp_description')->value,
+      ];
+    }
     // render tpl
     return [
       '#theme' => 'join_us',

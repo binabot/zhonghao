@@ -4,6 +4,8 @@
  * Contains zh.module.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Implements hook_theme().
  */
@@ -39,6 +41,26 @@ function zh_theme()
        'template' => 'contact-us',
      ],
    ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function zh_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+  switch ($form_id) {
+    case 'user_login_form':
+      $form['#submit'][] = '_redirect_to_admin_content_page';
+      break;
+  }
+}
+
+/**
+ * Additional form submit callback to set the redirect url.
+ */
+function _redirect_to_admin_content_page($form, FormStateInterface $form_state)
+{
+  $form_state->setRedirect('system.admin_content');
 }
 
 
