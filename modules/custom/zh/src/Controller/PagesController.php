@@ -37,7 +37,8 @@ class PagesController
   public function frontPage()
   {
     $vars = Theme::getUsefulVariables() + [
-
+      'news'       => $this->getLastNews('新闻资讯', 2),
+      'activities' => $this->getLastNews('公司活动', 3),
     ];
 
     // render tpl
@@ -77,9 +78,28 @@ class PagesController
   public function projectsPage()
   {
     $vars = Theme::getUsefulVariables() + [
-
+      'projects' => [],
     ];
-
+    // set projects
+    $projects = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+      'type'   => 'gongchengxiangmu',
+      'status' => 1,
+    ]);
+    $i = 1;
+    foreach ($projects as $nid => $node) {
+      $image_uri       = $node->get('field_project_image')->entity->getFileUri();
+      $small_image_url = ImageStyle::load('scale_370x290')->buildUrl($image_uri);
+      $big_image_url   = file_create_url($image_uri);
+      $vars['projects'][$i][$nid] = [
+        'title'     => $node->getTitle(),
+        'small_img' => $small_image_url,
+        'big_img'   => $big_image_url,
+        'desc'      => $node->get('field_project_desc')->value,
+      ];
+      if (count($vars['projects'][$i]) >= 3) {
+        $i++;
+      }
+    }
     // render tpl
     return [
       '#theme' => 'projects',

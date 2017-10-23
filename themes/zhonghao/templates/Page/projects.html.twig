@@ -1,136 +1,24 @@
 <main>
-      <section class="well10_2 bg-primary">
-          <div class="container">
-              <h2 class="center767">工程项目</h2>
-
-              <div class="row marTop3">
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img01_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img01.jpg" alt=""/>
-                              <span class="thumb_overlay">莆田市万科玉湖新城</span>
-                          </a>
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img02_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img02.jpg" alt=""/>
-                              <span class="thumb_overlay">佛山市万科沁园商住楼</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img03_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img03.jpg" alt=""/>
-                              <span class="thumb_overlay">深圳市万科千林山居商住楼</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
+  <section class="well10_2 bg-primary">
+    <div class="container">
+      <h2 class="center767">在建项目</h2>
+      {% for row in vars.projects %}
+        <div class="row marTop3">
+          {% for project in row %}
+            <div class="col-sm-4 col-xs-12">
+              <div class="thumbnail">
+                <a class="thumb" data-fancybox-group="1" href="{{ project.big_img }}">
+                  <img src="{{ project.small_img }}" />
+                  <span class="thumb_overlay">{{ project.title }}</span>
+                </a>
+                <div class="caption">
+                  <p>{{ project.desc }}</p>
+                </div>
               </div>
-
-              <div class="row offset2 marTop3">
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img04_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img04.jpg" alt=""/>
-                              <span class="thumb_overlay">长沙市万科金域华府一期、二期、三期</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img05_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img05.jpg" alt=""/>
-                              <span class="thumb_overlay">吴川市项目</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img06_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img06.jpg" alt=""/>
-                              <span class="thumb_overlay">东方珀丽广场</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-              </div>
-
-              <div class="row offset2 marTop3">
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img07_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img07.jpg" alt=""/>
-                              <span class="thumb_overlay">德阳市时代中心商业广场</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img08_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img08.jpg" alt=""/>
-                              <span class="thumb_overlay">深圳市劲嘉科技大厦</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-4 col-xs-12">
-                      <div class="thumbnail">
-                          <a class="thumb" data-fancybox-group="1" href="{{ vars.image_directory }}page-4_img09_original.jpg">
-                              <img src="{{ vars.image_directory }}page-4_img09.jpg" alt=""/>
-                              <span class="thumb_overlay">吉林省长春市恒盛豪庭</span>
-                          </a>
-
-                          <div class="caption">
-                              <p>本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”。</p>
-                          </div>
-                      </div>
-                  </div>
-
-              </div>
-
-          </div>
-      </section>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
 </main>
