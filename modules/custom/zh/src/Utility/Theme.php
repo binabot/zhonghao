@@ -53,13 +53,9 @@ class Theme
     // get current page
     $current_route_name   = \Drupal::routeMatch()->getRouteName();
     $vars['current_page'] = $current_route_name;
-    if ($current_route_name == 'entity.node.canonical' && $get_parameter_node = \Drupal::routeMatch()->getParameter('node')) {
-      $get_parameter_node_type = $get_parameter_node->getType();
-      switch ($get_parameter_node_type) {
-        case 'news':
-        case 'activities':
-          $vars['current_page'] = 'zh.company_culture';
-          break;
+    if ($current_route_name == 'entity.node.canonical' && $node = \Drupal::routeMatch()->getParameter('node')) {
+      if ($node->getType() === 'news') {
+        $vars['current_page'] = 'zh.company_culture';
       }
     }
     // render tpl

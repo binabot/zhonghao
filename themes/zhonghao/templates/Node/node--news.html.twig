@@ -1,0 +1,12 @@
+<main>
+  <section class="well2_2 bg-primary">
+    <div class="container node-wrapper">
+      <!-- Image -->
+      {% if custom.image is defined %}
+        <img src='{{ custom.image }}' style='width: 100%;'>
+      {% endif %}
+      <!-- Content -->
+      {{ content.field_article_content }}
+    </div>
+  </section>
+</main>

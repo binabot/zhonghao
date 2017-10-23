@@ -13,3 +13,23 @@ use Drupal\zh\Utility\Theme;
    $variables['header'] = Theme::getHeaderTpl();
    $variables['footer'] = Theme::getFooterTpl();
  }
+
+ /**
+  * Implements hook_preprocess_HOOK() for Node templates.
+  */
+ function zhonghao_preprocess_node(&$variables) {
+   $variables['#cache']['max-age'] = 0;
+   // $variables['#cache']['max-age'] = 900; // 15 min
+   // $variables['#cache']['tags'] = ['node_list']; // invalidated whenever any Node entity is updated, deleted or created
+
+   $node = $variables['node'];
+   switch ($node->getType()) {
+     case 'news':
+       if ($node->get('field_tupian')->entity) {
+         $image_uri = $node->get('field_tupian')->entity->getFileUri();
+         $variables['custom']['image'] = file_create_url($image_uri);
+       }
+       break;
+   }
+
+ }

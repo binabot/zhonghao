@@ -1,108 +1,41 @@
 <main>
-
-      <section class="well4_2 bg-primary">
-          <div class="container">
-              <h2 class="center767">新闻资讯</h2>
-
-              <div class="row">
-                  <div class="col-sm-3 col-xs-12 marTop4">
-                      <div class="thumbnail wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-                          <img src="{{ vars.image_directory }}/page-3_img01.jpg" alt=""/>
-                      </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-12 mg-add2">
-                      <h5 class="h5__mod">关于表彰2016年度“优秀”员工及“总裁特别奖”员工的决定</h5>
-                      <p>
-                        本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”，并最后更名为“深圳市中邦（集团）建设总承包有限公司”...<a href="#" class="fa-caret-right icon1"></a>
-                      </p>
-                  </div>
-
-                  <div class="col-sm-3 col-xs-12 marTop4">
-                      <div class="thumbnail wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-                          <img src="{{ vars.image_directory }}/page-3_img02.jpg" alt=""/>
-                      </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-12 mg-add2">
-                      <h5 class="h5__mod">关于表彰2016年度“优秀”员工及“总裁特别奖”员工的决定</h5>
-                      <p>
-                        本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”，并最后更名为“深圳市中邦（集团）建设总承包有限公司”...<a href="#" class="fa-caret-right icon1"></a>
-                      </p>
-                  </div>
+  <section class="well4_2 bg-primary">
+    <div class="container">
+      <h2 class="center767">新闻资讯</h2>
+      <div class="row">
+        {% for article in vars.news %}
+          <div class='col-sm-6'>
+            <div class="col-sm-6 col-xs-12 marTop4">
+              <div class="thumbnail wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
+                <img src="{{ article.image }}"/>
               </div>
-
-              <div class="row offset4">
-                  <div class="col-sm-3 col-xs-12 marTop4">
-                      <div class="thumbnail wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-                          <img src="{{ vars.image_directory }}/page-3_img03.jpg" alt=""/>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-3 col-xs-12 mg-add2">
-                      <h5 class="h5__mod">关于表彰2016年度“优秀”员工及“总裁特别奖”员工的决定</h5>
-                      <p>
-                        本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”，并最后更名为“深圳市中邦（集团）建设总承包有限公司”...<a href="#" class="fa-caret-right icon1"></a>
-                      </p>
-                  </div>
-
-                  <div class="col-sm-3 col-xs-12 marTop4">
-                      <div class="thumbnail wow fadeIn" data-wow-duration="2s" data-wow-delay="0.3s">
-                          <img src="{{ vars.image_directory }}/page-3_img04.jpg" alt=""/>
-                      </div>
-                  </div>
-
-                  <div class="col-sm-3 col-xs-12 mg-add2">
-                      <h5 class="h5__mod">关于表彰2016年度“优秀”员工及“总裁特别奖”员工的决定</h5>
-                      <p>
-                        本集团完成国有企业重组改制，并最后更名为“深圳市中邦（集团）建设总承包有限公司”，并最后更名为“深圳市中邦（集团）建设总承包有限公司”...<a href="#" class="fa-caret-right icon1"></a>
-                      </p>
-                  </div>
-              </div>
+            </div>
+            <div class="col-sm-6 col-xs-12 mg-add2">
+                <h5 class="h5__mod">{{ article.title }}</h5>
+                <p>
+                  {{ article.summary }} <a href="{{ article.link }}" class="fa-caret-right icon1"></a>
+                </p>
+            </div>
           </div>
-      </section>
-
-
-      <section class="well7 bg-secondary">
-          <div class="container">
-              <h2 class="center767">公司活动</h2>
-
-              <div class="row marTop3">
-                  <div class="col-sm-3 col-xs-12">
-                      <div class="thumbnail">
-                        <img src="{{ vars.image_directory }}/page-4_img10.jpg">
-                        <h5>与新疆各族群众一起逛巴扎</h5>
-                        <p>当日是新疆不少地方的巴扎日，各族群众纷纷走出家门，扶老携幼赶巴扎，选购生产生活用品。巴扎在维吾尔语中意为集市，遍布新疆城乡。因为地处古老的丝绸之路上...</p>
-                        <a href="#" class="btn btn-primary btn-red-bg"><span>阅读文章</span></a>
-                      </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-12">
-                      <div class="thumbnail">
-                        <img src="{{ vars.image_directory }}/page-4_img11.jpg">
-                        <h5>与新疆各族群众一起逛巴扎</h5>
-                        <p>当日是新疆不少地方的巴扎日，各族群众纷纷走出家门，扶老携幼赶巴扎，选购生产生活用品。巴扎在维吾尔语中意为集市，遍布新疆城乡。因为地处古老的丝绸之路上...</p>
-                        <a href="#" class="btn btn-primary btn-red-bg"><span>阅读文章</span></a>
-                      </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-12">
-                      <div class="thumbnail">
-                        <img src="{{ vars.image_directory }}/page-4_img12.jpg">
-                        <h5>与新疆各族群众一起逛巴扎</h5>
-                        <p>当日是新疆不少地方的巴扎日，各族群众纷纷走出家门，扶老携幼赶巴扎，选购生产生活用品。巴扎在维吾尔语中意为集市，遍布新疆城乡。因为地处古老的丝绸之路上...</p>
-                        <a href="#" class="btn btn-primary btn-red-bg"><span>阅读文章</span></a>
-                      </div>
-                  </div>
-                  <div class="col-sm-3 col-xs-12">
-                      <div class="thumbnail">
-                        <img src="{{ vars.image_directory }}/page-4_img13.jpg">
-                        <h5>与新疆各族群众一起逛巴扎</h5>
-                        <p>当日是新疆不少地方的巴扎日，各族群众纷纷走出家门，扶老携幼赶巴扎，选购生产生活用品。巴扎在维吾尔语中意为集市，遍布新疆城乡。因为地处古老的丝绸之路上...</p>
-                        <a href="#" class="btn btn-primary btn-red-bg"><span>阅读文章</span></a>
-                      </div>
-                  </div>
-              </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="well7 bg-secondary">
+    <div class="container">
+      <h2 class="center767">公司活动</h2>
+      <div class="row marTop3">
+        {% for article in vars.activities %}
+          <div class="col-sm-3 col-xs-12">
+            <div class="thumbnail">
+              <img src="{{ article.image }}">
+              <h5>{{ article.title }}</h5>
+              <p>{{ article.summary }}</p>
+              <a href="{{ article.link }}" class="btn btn-primary btn-red-bg"><span>阅读文章</span></a>
+            </div>
           </div>
-      </section>
-
-
-
-
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 </main>
