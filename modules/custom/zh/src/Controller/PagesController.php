@@ -29,7 +29,7 @@ class PagesController
   }
 
   /**
-   * Front page
+   * Front.
    */
   public function frontPage()
   {
@@ -48,15 +48,124 @@ class PagesController
     ];
   }
 
+  /**
+   * About us.
+   */
+  public function aboutUsPage()
+  {
+    $vars = Theme::getUsefulVariables() + [
 
+    ];
 
+    // render tpl
+    return [
+      '#theme' => 'about_us',
+      '#vars'  => $vars,
+      '#cache' => [
+        'max-age' => 0, // no cache
+        // 'max-age' => 900, // 15 min
+      ],
+    ];
+  }
 
+  /**
+   * Projects.
+   */
+  public function projectsPage()
+  {
+    $vars = Theme::getUsefulVariables() + [
 
+    ];
 
+    // render tpl
+    return [
+      '#theme' => 'projects',
+      '#vars'  => $vars,
+      '#cache' => [
+        'max-age' => 0, // no cache
+        // 'max-age' => 900, // 15 min
+      ],
+    ];
+  }
 
+  /**
+   * Affiliates.
+   */
+  public function affiliatesPage()
+  {
+    $vars = Theme::getUsefulVariables() + [
 
+    ];
 
+    // render tpl
+    return [
+      '#theme' => 'affiliates',
+      '#vars'  => $vars,
+      '#cache' => [
+        'max-age' => 0, // no cache
+        // 'max-age' => 900, // 15 min
+      ],
+    ];
+  }
 
+  /**
+   * Company culture.
+   */
+  public function companyCulturePage()
+  {
+    $vars = Theme::getUsefulVariables() + [
 
+    ];
+
+    // render tpl
+    return [
+      '#theme' => 'company_culture',
+      '#vars'  => $vars,
+      '#cache' => [
+        'max-age' => 0, // no cache
+        // 'max-age' => 900, // 15 min
+      ],
+    ];
+  }
+
+  /**
+   * Join us.
+   */
+  public function joinUsPage()
+  {
+    $vars = Theme::getUsefulVariables() + [
+
+    ];
+
+    // render tpl
+    return [
+      '#theme' => 'join_us',
+      '#vars'  => $vars,
+      '#cache' => [
+        'max-age' => 0, // no cache
+        // 'max-age' => 900, // 15 min
+      ],
+    ];
+  }
+
+  /**
+   * Contact us.
+   */
+  public function contactUsPage()
+  {
+    $vars = Theme::getUsefulVariables() + [
+
+    ];
+
+    // render tpl
+    return [
+      '#theme' => 'contact_us',
+      '#vars'  => $vars,
+      '#cache' => [
+        'max-age' => 0, // no cache
+        // 'max-age' => 900, // 15 min
+      ],
+    ];
+  }
 
 }

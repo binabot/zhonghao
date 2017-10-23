@@ -1,7 +1,49 @@
-zh.front_page:
+zh.front:
   path: '/front'
   defaults:
     _title: '首页'
     _controller: '\Drupal\zh\Controller\PagesController::frontPage'
+  requirements:
+    _access: 'TRUE'
+zh.about_us:
+  path: '/about-us'
+  defaults:
+    _title: '关于我们'
+    _controller: '\Drupal\zh\Controller\PagesController::aboutUsPage'
+  requirements:
+    _access: 'TRUE'
+zh.projects:
+  path: '/projects'
+  defaults:
+    _title: '工程项目'
+    _controller: '\Drupal\zh\Controller\PagesController::projectsPage'
+  requirements:
+    _access: 'TRUE'
+zh.affiliates:
+  path: '/affiliates'
+  defaults:
+    _title: '下属机构'
+    _controller: '\Drupal\zh\Controller\PagesController::affiliatesPage'
+  requirements:
+    _access: 'TRUE'
+zh.company_culture:
+  path: '/company-culture'
+  defaults:
+    _title: '公司文化'
+    _controller: '\Drupal\zh\Controller\PagesController::companyCulturePage'
+  requirements:
+    _access: 'TRUE'
+zh.join_us:
+  path: '/join-us'
+  defaults:
+    _title: '加入我们'
+    _controller: '\Drupal\zh\Controller\PagesController::joinUsPage'
+  requirements:
+    _access: 'TRUE'
+zh.contact_us:
+  path: '/contact-us'
+  defaults:
+    _title: '工程项目'
+    _controller: '\Drupal\zh\Controller\PagesController::contactUsPage'
   requirements:
     _access: 'TRUE'

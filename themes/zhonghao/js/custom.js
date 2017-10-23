@@ -1,5 +1,8 @@
 $(document).ready(function(){
 
+  // Menu
+  $('.sf-menu').superfish();
+
   // Front page
   $('#front-logos-slider').bxSlider({
     slideWidth: 200,

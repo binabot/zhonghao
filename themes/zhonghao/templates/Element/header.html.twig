@@ -3,59 +3,48 @@
     <div class="container">
       <div class="brand">
         <h1 class="brand_name">
-          <a href="./">深圳市中濠建工集团有限公司</a>
+          <a href="{{ links.front }}">深圳市中濠建工集团有限公司</a>
         </h1>
         <p class="brand_slogan">
           ShenZhen Zoneholt Construction Group
         </p>
       </div>
-
       <nav class="nav">
-
         <ul class="nav navbar-nav sf-menu" data-type="navbar">
-          <li <?php if ($current_page === 'front'): ?>class="active"<?php endif; ?>>
-              <a class="dropdown" href="index.php">首页</a>
+          <li {% if current_page == 'zh.front' %}class="active"{% endif %}>
+              <a class="dropdown" href="{{ links.front }}">首页</a>
           </li>
-          <li <?php if ($current_page === 'about_us'): ?>class="active"<?php endif; ?>>
-            <a class="dropdown" href="about-us.php">关于中濠</a>
+          <li {% if current_page == 'zh.about_us' %}class="active"{% endif %}>
+            <a class="dropdown" href="{{ links.about_us.main_page }}">关于中濠</a>
             <ul>
-                <li>
-                    <a href="about-us.php#qygk">企业概况</a>
-                </li>
-                <li>
-                    <a href="about-us.php#zbzs">总部展示</a>
-                </li>
-                <li>
-                    <a href="about-us.php#gszz">公司资质</a>
-                </li>
+              <li>
+                  <a href="{{ links.about_us.qygk }}">企业概况</a>
+              </li>
+              <li>
+                  <a href="{{ links.about_us.zbzs }}">总部展示</a>
+              </li>
+              <li>
+                  <a href="{{ links.about_us.gszz }}">公司资质</a>
+              </li>
             </ul>
           </li>
-          <li <?php if ($current_page === 'projects'): ?>class="active"<?php endif; ?>>
-              <a href="projects.php">工程项目</a>
+          <li {% if current_page == 'zh.projects' %}class="active"{% endif %}>
+              <a href="{{ links.projects }}">工程项目</a>
           </li>
-          <li <?php if ($current_page === 'affiliates'): ?>class="active"<?php endif; ?>>
-            <a class="dropdown" href="affiliates.php">下属机构</a>
+          <li {% if current_page == 'zh.affiliates' %}class="active"{% endif %}>
+            <a class="dropdown" href="{{ links.affiliates }}">下属机构</a>
           </li>
-          <li <?php if ($current_page === 'company_culture'): ?>class="active"<?php endif; ?>>
-              <a href="company-culture.php">企业文化</a>
+          <li {% if current_page == 'zh.company_culture' %}class="active"{% endif %}>
+              <a href="{{ links.company_culture }}">企业文化</a>
           </li>
-          <li <?php if ($current_page === 'join_us'): ?>class="active"<?php endif; ?>>
-              <a href="join-us.php">加入我们</a>
+          <li {% if current_page == 'zh.join_us' %}class="active"{% endif %}>
+              <a href="{{ links.join_us }}">加入我们</a>
           </li>
-          <li <?php if ($current_page === 'contact_us'): ?>class="active"<?php endif; ?>>
-              <a href="contact-us.php">联系我们</a>
+          <li {% if current_page == 'zh.contact_us' %}class="active"{% endif %}>
+              <a href="{{ links.contact_us }}">联系我们</a>
           </li>
-
-      </ul>
-
-
+        </ul>
       </nav>
     </div>
-
-
   </div>
-
-
-
-
 </header>

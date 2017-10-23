@@ -14,6 +14,30 @@ function zh_theme()
        'variables' => ['vars' => NULL],
        'template' => 'front',
      ],
+     'about_us' => [
+       'variables' => ['vars' => NULL],
+       'template' => 'about-us',
+     ],
+     'projects' => [
+       'variables' => ['vars' => NULL],
+       'template' => 'projects',
+     ],
+     'affiliates' => [
+       'variables' => ['vars' => NULL],
+       'template' => 'affiliates',
+     ],
+     'company_culture' => [
+       'variables' => ['vars' => NULL],
+       'template' => 'company-culture',
+     ],
+     'join_us' => [
+       'variables' => ['vars' => NULL],
+       'template' => 'join-us',
+     ],
+     'contact_us' => [
+       'variables' => ['vars' => NULL],
+       'template' => 'contact-us',
+     ],
    ];
 }
 
