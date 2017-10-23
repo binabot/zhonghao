@@ -8,9 +8,6 @@
 namespace Drupal\zh\Utility;
 
 use Drupal\Core\Url;
-// use Drupal\webform\Entity\Webform;
-// use Drupal\Core\Database\Database;
-// use Drupal\image\Entity\ImageStyle;
 
 /**
  * Theme.

@@ -167,42 +167,41 @@
 
                   <div class="col-md-12 col-lg-4 col-xs-12 v-line__ins mg-add">
                       <h5>联系我们</h5>
-
                       <div class="address">
-                          <dl>
-                              <dt><span class="fa fa-phone"></span>电话:</dt>
-                              <dd><a href="callto:#">800-2345-6789</a></dd>
-
-                              <dt><span class="fa fa-home"></span>地址:</dt>
-                              <dd>
-                                  <address>中国. 深圳. 罗湖区文锦中路1045号联兴大厦中座四楼</address>
-                              </dd>
-                              <dt><span class="fa fa-envelope-o"></span>邮箱：</dt>
-                              <dd><a href="mailto:#">test@zhonghao.com.cn</a></dd>
-                          </dl>
+                        <dl>
+                          <dt><span class="fa fa-phone"></span></dt>
+                          <dd>前台电话: 0755-27910828 - 人事部杨小姐 18923786420</dd>
+                          <dt><span class="fa fa-home"></span>地址:</dt>
+                          <dd>
+                            <address>深圳市中濠建工工程有限公司 - 深圳市宝安区西乡大道228号中濠总部9楼</address>
+                          </dd>
+                          <dt><span class="fa fa-envelope-o"></span>邮箱：</dt>
+                          <dd><a href="mailto:szzhonghao@126.com">szzhonghao@126.com</a></dd>
+                        </dl>
                       </div>
 
-                      <form method="post" action="bat/rd-mailform.php" class="mailform off2">
-                        <input type="hidden" name="form-type" value="contact">
-                        <fieldset class="row">
-                          <label class="col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" name="name" placeholder="姓名:" data-constraints="@LettersOnly @NotEmpty">
-                          </label>
-                          <label class="col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" name="phone" placeholder="电话:" data-constraints="@Phone">
-                          </label>
-                          <label class="col-md-12 col-sm-12 col-xs-12">
-                            <input type="text" name="email" placeholder="邮箱:" data-constraints="@Email @NotEmpty">
-                          </label>
-                          <label class="col-md-12 col-sm-12 col-xs-12">
-                            <textarea name="message" placeholder="信息:" data-constraints="@NotEmpty"></textarea>
-                          </label>
-                          <div class="mfControls col-md-12 col-sm-12 col-xs-12">
-                            <button type="submit" class="btn">发送</button>
-                            <button class="btn" type="reset">清除</button>
-                          </div>
-                        </fieldset>
-                      </form>
+                      <!--
+                        <form class="mailform off2">
+                          <input type="hidden">
+                          <fieldset class="row">
+                            <label class="col-md-12 col-sm-12 col-xs-12">
+                              <input type="text" class='name' placeholder="姓名:" maxlength="250" required>
+                            </label>
+                            <label class="col-md-12 col-sm-12 col-xs-12">
+                              <input type="text" class="phone" placeholder="电话:" maxlength="30">
+                            </label>
+                            <label class="col-md-12 col-sm-12 col-xs-12">
+                              <input type="email" class="email" placeholder="邮箱:" maxlength="250" required>
+                            </label>
+                            <label class="col-md-12 col-sm-12 col-xs-12">
+                              <textarea class="message" placeholder="信息:" required></textarea>
+                            </label>
+                            <div class="mfControls col-md-12 col-sm-12 col-xs-12">
+                              <button type="submit" class="btn">发送</button>
+                            </div>
+                          </fieldset>
+                        </form>
+                      -->
 
                       <div class="map">
                         <div class="baidu-map map map__mod">

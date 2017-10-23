@@ -97,9 +97,28 @@ class PagesController
   public function affiliatesPage()
   {
     $vars = Theme::getUsefulVariables() + [
-
+      'affiliates' => [],
     ];
-
+    // set affiliates
+    $affiliates = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+      'type'   => 'xiashujigou',
+      'status' => 1,
+    ]);
+    $i = 1;
+    foreach ($affiliates as $nid => $node) {
+      $vars['affiliates'][$i][$nid] = [
+        'title'       => $node->getTitle(),
+        'address'     => $node->get('field_affi_address')->value,
+        'fax'         => $node->get('field_affi_fax')->value,
+        'business'    => $node->get('field_affi_business')->value,
+        'contact'     => $node->get('field_affi__contact')->value,
+        'telephone'   => $node->get('field_affi_tel')->value,
+        'postal_code' => $node->get('field_affi_cp')->value,
+      ];
+      if (count($vars['affiliates'][$i]) >= 2) {
+        $i++;
+      }
+    }
     // render tpl
     return [
       '#theme' => 'affiliates',
@@ -209,7 +228,7 @@ class PagesController
     ];
     // set jobs
     $jobs = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
-      'type' => 'zhaopin',
+      'type'   => 'zhaopin',
       'status' => 1,
     ]);
     foreach ($jobs as $nid => $node) {
